@@ -1,0 +1,9 @@
+---
+- name: Installing Multiple Package
+  hosts: webservers
+  become: true
+  tasks:
+  - name: Install multiple packages
+    yum:
+     name: ['git', 'make', 'wget', 'docker', 'tree', 'mysql', 'gcc']
+     state: installed

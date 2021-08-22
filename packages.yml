@@ -1,0 +1,11 @@
+---
+- name: Installing a package
+  hosts: webservers
+  become: true
+  tasks:
+  - name: Installing a package 'tree and docker'
+    yum:
+     name: tree
+     state: installed
+     name: docker
+     state: installed
